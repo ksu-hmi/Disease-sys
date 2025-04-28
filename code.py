@@ -9,16 +9,12 @@ def Diarrhea():
             break
         list_symptom.append(a)
     temp = []
-
     for x in list_symptom:
         if x not in temp:
             temp.append(x)
-
     list_symptom = temp
-    k = len(list_symptom)
-    p = float((k/6)*100)
-
-    return p
+    k = float((len(list_symptom)/6)*100)
+    return k
 
 def Malaria():
     print('1.Chills\n','2.Headache\n','3.Vomiting\n','4.Dysentery\n','5.Join Pain\n','6.Rapid breathing\n','7.Rapid heart rate\n','8.Cough\n','9.No more symptoms\n')
@@ -30,19 +26,15 @@ def Malaria():
             break
         list_symptom.append(a)
     temp = []
-
     for x in list_symptom:
         if x not in temp:
             temp.append(x)
-
     list_symptom = temp
-    k = len(list_symptom)
-    p = float((k / 8) * 100)
-
-    return p
+    k = float((len(list_symptom)/8)*100)
+    return k
 
 def Covid_19():
-    print('1.Feve\n','2.Dry cough\n','3.Sore throat\n','4.Dysentery\n','5.Headache\n','6.Loose of smell or taste\n','7.Rash on skin\n','8.Shortness of breathing\n','9.Chest Pain\n','10.No more symptoms\n')
+    print('1.Fever\n','2.Dry cough\n','3.Sore throat\n','4.Dysentery\n','5.Headache\n','6.Loss of smell or taste\n','7.Rash on skin\n','8.Shortness of breathing\n','9.Chest Pain\n','10.No more symptoms\n')
     print('Enter any symptoms:')
     list_symptom = []
     while 1:
@@ -51,19 +43,15 @@ def Covid_19():
             break
         list_symptom.append(a)
     temp = []
-
     for x in list_symptom:
         if x not in temp:
             temp.append(x)
-
     list_symptom = temp
-    k = len(list_symptom)
-    p = float((k / 9) * 100)
-
-    return p
+    k = float((len(list_symptom)/9)*100)
+    return k
 
 def Dengue():
-    print('1.Baily pain\n','2.Vomiting\n','3.Bleeding from nose\n','4.Vomiting blood\n','5.Tired\n','6.No more symptoms\n')
+    print('1.Belly pain\n','2.Vomiting\n','3.Bleeding from nose\n','4.Vomiting blood\n','5.Tired\n','6.No more symptoms\n')
     print('Enter any symptoms:')
     list_symptom = []
     while 1:
@@ -72,19 +60,15 @@ def Dengue():
             break
         list_symptom.append(a)
     temp = []
-
     for x in list_symptom:
         if x not in temp:
             temp.append(x)
-
     list_symptom = temp
-    k = len(list_symptom)
-    p = float((k / 5) * 100)
-
-    return p
+    k = float((len(list_symptom)/5)*100)
+    return k
 
 def Chikungunia():
-    print('1. Fever\n','2.Joint Pain\n','3.Headache\n','4.Muscle Pain\n','5.No more symptoms\n')
+    print('1.Fever\n','2.Joint Pain\n','3.Headache\n','4.Muscle Pain\n','5.No more symptoms\n')
     print('Enter any symptoms:')
     list_symptom = []
     while 1:
@@ -93,16 +77,30 @@ def Chikungunia():
             break
         list_symptom.append(a)
     temp = []
-
     for x in list_symptom:
         if x not in temp:
             temp.append(x)
-
     list_symptom = temp
-    k = len(list_symptom)
-    p = float((k / 4) * 100)
+    k = float((len(list_symptom)/4)*100)
+    return k
 
-    return p
+# 6. New disease added: Typhoid
+def Typhoid():
+    print('1.Prolonged Fever\n','2.Weakness\n','3.Stomach Pain\n','4.Headache\n','5.Loss of appetite\n','6.Constipation or diarrhea\n','7.Skin Rash\n','8.No more symptoms\n')
+    print('Enter any symptoms:')
+    list_symptom = []
+    while 1:
+        a = int(input())
+        if a == 8:
+            break
+        list_symptom.append(a)
+    temp = []
+    for x in list_symptom:
+        if x not in temp:
+            temp.append(x)
+    list_symptom = temp
+    k = float((len(list_symptom)/7)*100)
+    return k
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
@@ -110,7 +108,7 @@ if __name__ == '__main__':
     name = input()
     print("Enter Patient Age: ")
     age = input()
-    print('1.Diarrhea\n', '2.Malaria\n', '3.Covid-19\n', '4.Dengue\n', '5.Chikungunia\n')
+    print('1.Diarrhea\n', '2.Malaria\n', '3.Covid-19\n', '4.Dengue\n', '5.Chikungunia\n', '6.Typhoid\n')
     print('Enter a disease number:')
     a = int(input())
     if a == 1:
@@ -133,6 +131,10 @@ if __name__ == '__main__':
         disease = "Chikungunia"
         print(disease)
         k = Chikungunia()
+    if a == 6:
+        disease = "Typhoid"
+        print(disease)
+        k = Typhoid()
 
     print("Test Result")
     print("Patient name: ", name)
@@ -142,4 +144,3 @@ if __name__ == '__main__':
         print("Status: Positive")
     else:
         print("Status: Negative")
-
