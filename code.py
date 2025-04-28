@@ -136,6 +136,7 @@ if __name__ == '__main__':
         print(disease)
         k = Typhoid()
 
+
     print("Test Result")
     print("Patient name: ", name)
     print("Patient age: ", age)
