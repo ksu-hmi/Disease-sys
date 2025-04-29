@@ -102,7 +102,7 @@ def Typhoid():
     k = float((len(list_symptom)/7)*100)
     return k
 
-# 7. NEW: Influenza
+# 7. Influenza (added earlier)
 def Influenza():
     print('1.Fever\n','2.Cough\n','3.Sore throat\n','4.Runny nose\n','5.Body aches\n','6.Fatigue\n','7.Chills\n','8.Headache\n','9.No more symptoms\n')
     print('Enter any symptoms:')
@@ -120,13 +120,31 @@ def Influenza():
     k = float((len(list_symptom)/8)*100)
     return k
 
+# 8. NEW: Chickenpox
+def Chickenpox():
+    print('1.Itchy Rash\n','2.Fever\n','3.Loss of appetite\n','4.Headache\n','5.Tiredness\n','6.No more symptoms\n')
+    print('Enter any symptoms:')
+    list_symptom = []
+    while 1:
+        a = int(input())
+        if a == 6:
+            break
+        list_symptom.append(a)
+    temp = []
+    for x in list_symptom:
+        if x not in temp:
+            temp.append(x)
+    list_symptom = temp
+    k = float((len(list_symptom)/5)*100)
+    return k
+
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print("Enter Patient Name: ")
     name = input()
     print("Enter Patient Age: ")
     age = input()
-    print('1.Diarrhea\n', '2.Malaria\n', '3.Covid-19\n', '4.Dengue\n', '5.Chikungunia\n', '6.Typhoid\n', '7.Influenza\n')
+    print('1.Diarrhea\n', '2.Malaria\n', '3.Covid-19\n', '4.Dengue\n', '5.Chikungunia\n', '6.Typhoid\n', '7.Influenza\n', '8.Chickenpox\n')
     print('Enter a disease number:')
     a = int(input())
     if a == 1:
@@ -157,6 +175,10 @@ if __name__ == '__main__':
         disease = "Influenza"
         print(disease)
         k = Influenza()
+    if a == 8:
+        disease = "Chickenpox"
+        print(disease)
+        k = Chickenpox()
 
     print("Test Result")
     print("Patient name: ", name)
