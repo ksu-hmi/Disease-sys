@@ -84,7 +84,6 @@ def Chikungunia():
     k = float((len(list_symptom)/4)*100)
     return k
 
-# 6. Typhoid (added earlier)
 def Typhoid():
     print('1.Prolonged Fever\n','2.Weakness\n','3.Stomach Pain\n','4.Headache\n','5.Loss of appetite\n','6.Constipation or diarrhea\n','7.Skin Rash\n','8.No more symptoms\n')
     print('Enter any symptoms:')
@@ -102,7 +101,6 @@ def Typhoid():
     k = float((len(list_symptom)/7)*100)
     return k
 
-# 7. Influenza (added earlier)
 def Influenza():
     print('1.Fever\n','2.Cough\n','3.Sore throat\n','4.Runny nose\n','5.Body aches\n','6.Fatigue\n','7.Chills\n','8.Headache\n','9.No more symptoms\n')
     print('Enter any symptoms:')
@@ -120,9 +118,26 @@ def Influenza():
     k = float((len(list_symptom)/8)*100)
     return k
 
-# 8. NEW: Chickenpox
 def Chickenpox():
     print('1.Itchy Rash\n','2.Fever\n','3.Loss of appetite\n','4.Headache\n','5.Tiredness\n','6.No more symptoms\n')
+    print('Enter any symptoms:')
+    list_symptom = []
+    while 1:
+        a = int(input())
+        if a == 6:
+            break
+        list_symptom.append(a)
+    temp = []
+    for x in list_symptom:
+        if x not in temp:
+            temp.append(x)
+    list_symptom = temp
+    k = float((len(list_symptom)/5)*100)
+    return k
+
+# 9. NEW: Pneumonia
+def Pneumonia():
+    print('1.Cough\n','2.Fever\n','3.Chest pain\n','4.Shortness of breath\n','5.Fatigue\n','6.No more symptoms\n')
     print('Enter any symptoms:')
     list_symptom = []
     while 1:
@@ -144,7 +159,7 @@ if __name__ == '__main__':
     name = input()
     print("Enter Patient Age: ")
     age = input()
-    print('1.Diarrhea\n', '2.Malaria\n', '3.Covid-19\n', '4.Dengue\n', '5.Chikungunia\n', '6.Typhoid\n', '7.Influenza\n', '8.Chickenpox\n')
+    print('1.Diarrhea\n', '2.Malaria\n', '3.Covid-19\n', '4.Dengue\n', '5.Chikungunia\n', '6.Typhoid\n', '7.Influenza\n', '8.Chickenpox\n', '9.Pneumonia\n')
     print('Enter a disease number:')
     a = int(input())
     if a == 1:
@@ -179,6 +194,10 @@ if __name__ == '__main__':
         disease = "Chickenpox"
         print(disease)
         k = Chickenpox()
+    if a == 9:
+        disease = "Pneumonia"
+        print(disease)
+        k = Pneumonia()
 
     print("Test Result")
     print("Patient name: ", name)
