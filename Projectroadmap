@@ -10,3 +10,61 @@ ADDED Influenza" TO THE LIST OF DISEASES ON THE CODE DONE
 ADDED Chickenpox TO THE LIST OF DISEASES ON THE CODE DONE
 added and  Improved formatting and added comments to all commits done.
 
+
+
+Project Roadmap
+Every project has a beginning, and this one started with a simple idea:
+“What if people could check their symptoms before deciding whether to see a doctor?”
+
+Here’s a look at what’s already been done with the Intelligent Disease Symptoms Checker (IDSC).
+
+✅ What i have  Already Accomplished
+ Here’s what’s already been completed:
+
+🏷️ Came up with the project title — Settled with ntelligent Disease Symptoms Checker (IDSC)
+
+📝 Wrote and submitted the project proposal on D2L — our foundation is set
+
+📄 Created a detailed README file — so anyone can understand what this project is about
+
+💻 Found and adapted working Python code to build my very first version of the disease checker
+
+🧰 Added key packages like google and requests — laying the groundwork for possible future web features
+
+And of course, the core of the project — symptom-based disease detection — is up and running. We started with a small list of illnesses and then grew it to include more real-life conditions people face.
+
+We now support:
+
+✅ Diarrhea
+
+✅ Malaria
+
+✅ COVID-19
+
+✅ Dengue
+
+✅ Chikungunya
+
+✅ Typhoid (recently added)
+
+✅ Influenza (Flu) (also added)
+
+✅ Chickenpox (added)
+
+✅ Pneumonia (added too!)
+
+These additions make the tool more helpful and realistic for different users around the world.
+
+🧹 Tidied up the code and added comments so it’s easier to read and work on
+
+🗒️ Wrote clear commit messages to track progress in a meaningful way
+
+🚧 What i am  Working on Now
+I am  currently making things smoother and easier to use:
+
+🛠️ Improving how users enter their symptoms (so they don’t get confused or stuck)
+
+🧪 Testing the app to catch bugs and make sure it works as expected
+
+🔄 Streamlining the way symptoms are shown and selected, so it feels faster and more intuitive
+
